@@ -15,7 +15,7 @@ assert.equal(typeof ac.import, 'function');
 
 console.log("# ac.import imports list of words into memory")
 
-ac.import(function (words) {
+ac.import(function (err, words) {
 	console.log('words.txt had' + words.length + "words in it");
 	assert.equal(words.length, 99172);
 });
@@ -31,8 +31,23 @@ ac.import(function(){
 	ac.findWord('awes',function (err, found){
 	assert.equal(err,null);
 	assert.equal(found.length, 10);
-	})
-})
+	});
+});
+
+
+console.log('#### ac.stats tracks the searched strings');
+ac.import(function(){	
+	ac.stats('awesome',function (err, stats){
+	console.log(stats);
+	assert.equal(stats['awesome'].length,1);
+			ac.stats('awesome',function (err, stats){
+			console.log(stats);
+			assert.equal(stats['awesome'].length,2);
+		});
+	});
+
+});
+
 
 
 
