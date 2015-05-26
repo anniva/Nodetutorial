@@ -1,0 +1,25 @@
+{
+  "name": "nodetutorial-fac",
+  "version": "1.0.0",
+  "description": "tutorial dictionary thingy",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anniva/Nodetutorial.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anniva/Nodetutorial/issues"
+  },
+  "homepage": "https://github.com/anniva/Nodetutorial#readme"
+}
